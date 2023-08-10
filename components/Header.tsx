@@ -67,7 +67,7 @@ const Header = () => {
                 </div>
               </div>
               {/* icon */}
-              <div>{link.icon}</div>
+              <div className="">{link.icon}</div>
             </Link>
           );
         })}
