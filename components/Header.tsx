@@ -38,7 +38,7 @@ const Header = () => {
       <div
         className="flex w-full xl:flex-col items-center justify-between 
       xl:justify-center gap-y-10 px-4 md:px-40 xl:px-0 h-[80px] xl:h-max py-8 bg-white/10
-      backdrop-blur-sm text-3xl xl:text-xl xl:rounded-full "
+      backdrop-blur-sm text-3xl xl:text-xl xl:rounded-xl"
       >
         {navData.map((link, index) => {
           return (
@@ -56,7 +56,7 @@ const Header = () => {
                   className="bg-white relative flex text-primary items-center p-[6px]
                rounded-[3px]"
                 >
-                  <div className="text-[12px] leading-none font-semibold capitalize">
+                  <div className="text-[18px] leading-none font-semibold capitalize">
                     {link.name}
                   </div>
                   {/* triangle */}
