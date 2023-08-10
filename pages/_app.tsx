@@ -1,4 +1,5 @@
 import '../styles/globals.css';
+import { AppProps } from 'next/app';
 
 //? router
 import { useRouter } from 'next/router';
@@ -10,7 +11,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import Layout from '../components/Layout';
 import Transition from '../components/Transition';
 
-export default function MyApp({ Component, pageProps }) {
+const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   const router = useRouter();
 
   return (
@@ -24,3 +25,5 @@ export default function MyApp({ Component, pageProps }) {
     </Layout>
   );
 }
+
+export default MyApp;
