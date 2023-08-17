@@ -10,11 +10,14 @@ from 'react-icons/si';
 import 
   {RiGuideFill, RiSketching}
 from 'react-icons/ri';
+import 
+  {CiHome,CiRead,CiUnlock,CiCrop,CiMountain1,CiDesktop,CiViewTimeline}
+from 'react-icons/ci';
 
 
 export default function index() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-start mt-[100px]">
+    <div className="w-full h-full flex flex-col items-center justify-center">
       <div className="w-full h-1/4 flex flex-row items-center justify-center">
         <div className="bg-[#ff6219] rounded-l-lg w-1/5 h-full flex flex-col items-center justify-evenly p-8">
           <span>Общая площадь, м2:</span>
@@ -47,15 +50,32 @@ export default function index() {
           </div>
         </div>
       </div>
-      <span className="text-[48px] mt-[120px]">ПРАЙС ЛИСТ</span>
-      <div className="grid grid-cols-3 grid-rows-2">
-        <div className='text-[100px] text-accent mb-4'><MdArchitecture/></div>
-        <div className='text-[100px] text-accent mb-4'><BiLogoVisualStudio/></div>
-        <div className='text-[100px] text-accent mb-4'><RiSketching/></div>
-        <div className='text-[100px] text-accent mb-4'><BiSolidKey/></div>
-        <div className='text-[100px] text-accent mb-4'><RiGuideFill/></div>
-        <div className='text-[100px] text-accent mb-4'><SiBlueprint/></div>
-     
+      <span className="text-[32px] mt-[120px]">ПРАЙС ЛИСТ</span>
+      <div className="grid grid-cols-3 grid-rows-2 align-center gap-[40px] mt-[30px]">
+        <div className="flex flex-col items-center justify-center">
+          <div className='text-[80px] text-accent mb-4'><CiDesktop/></div>
+          <span>Проектирование 1500 р/м2</span>
+        </div>
+        <div className="flex flex-col items-center justify-center">
+          <div className='text-[80px] text-accent mb-4'><CiHome/></div>
+          <span>Визуализация дизайн проекта 1500 р/м2</span>
+        </div>
+        <div className="flex flex-col items-center justify-center">
+          <div className='text-[80px] text-accent mb-4'><CiViewTimeline/></div>
+          <span>Эскизная часть дизайн проекта 1500 р/м2</span>
+        </div>
+        <div className="flex flex-col items-center justify-center">
+          <div className='text-[80px] text-accent mb-4'><CiUnlock/></div>
+          <span>Дизай проект под ключ 1500 р/м2</span>
+        </div>
+        <div className="flex flex-col items-center justify-center">
+          <div className='text-[80px] text-accent mb-4'><CiCrop/></div>
+          <span>Обмерочный чертеж 100 р/м2</span>
+        </div>
+        <div className="flex flex-col items-center justify-center">
+          <div className='text-[80px] text-accent mb-4'><CiMountain1/></div>
+          <span>Авторский надзор 50000 р/мес</span>
+        </div>
       </div>
     </div>
   );
