@@ -30,7 +30,7 @@ type LayoutProps = {
 
 const Layout: React.FC <LayoutProps> = ({children}) => {
   return (
-    <div className={`page bg-site text-white bg-cover bg-no-repeat ${jost.className} font-sora relative`}>
+    <div className={`page text-white bg-cover bg-no-repeat ${jost.className} font-sora relative`}>
       <Header />
       {children}
     </div>

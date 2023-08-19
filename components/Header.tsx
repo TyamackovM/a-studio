@@ -9,13 +9,14 @@ import {
 } from "react-icons/hi2";
 
 import { MdCalculate } from "react-icons/md";
-import { FaProjectDiagram } from 'react-icons/fa'
+import { FaProjectDiagram } from "react-icons/fa";
 
 //? next link
 import Link from "next/link";
 
 //? next router
 import { useRouter } from "next/router";
+import React from "react";
 
 export const navData = [
   { name: "Главная", path: "/", icon: <HiHome /> },
@@ -41,11 +42,11 @@ const Header = () => {
       backdrop-blur-sm text-3xl xl:text-xl xl:rounded-xl"
       >
         {navData.map((link, index) => {
+          const isActive = link.path === pathname;
+          const iconClass = isActive ? "text-accent" : "text-main";
           return (
             <Link
-              className={`${
-                link.path === pathname && "text-accent "
-              } relative flex 
+              className={`relative flex 
             group hover:text-accent transition-all duration-300`}
               href={link.path}
               key={index}
@@ -61,13 +62,17 @@ const Header = () => {
                   </div>
                   {/* triangle */}
                   <div
-                    className="border-solid border-l-white border-r-8 border-y-transparent 
+                    className="border border-white border-r-8 border-y-transparent 
                  border-y-[6px] border-l-0 absolute -left-2"
                   ></div>
                 </div>
               </div>
               {/* icon */}
-              <div className="">{link.icon}</div>
+              <div className="">
+                {React.cloneElement(link.icon, {
+                  className: `${iconClass} hover:text-accent`,
+                })}
+              </div>
             </Link>
           );
         })}
