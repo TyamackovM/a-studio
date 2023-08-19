@@ -28,7 +28,7 @@ export default function index() {
         </div>
         <div className="bg-[#ff6219] w-2/6 h-full flex flex-col items-center justify-evenly p-8">
           <span>Объект:</span>
-          <select className="w-1/2 text-black">
+          <select className="w-1/2 text-white-500 bg-transparent text-4xl text-center border-b-2 border-c66900 border-t-0 border-l-0 border-r-0 border-rounded-0 outline-none resize-none whitespace-normal overflow-ellipsisalign-middle whitespace-nowrap select-auto cursor-pointer my-0 border-1 border-solid border-white-500">
             <option value="option1">Выберите...</option>
             <option value="option2">Option 2</option>
             <option value="option3">Option 3</option>
@@ -44,7 +44,9 @@ export default function index() {
         </div>
         <div className="bg-[#ff6219] rounded-r-lg w-1/5 h-full flex flex-col items-center justify-evenly p-8">
           <span>Готово</span>
-          <button>Рассчитать</button>
+          <button className="border-2 text-[24px] rounded pl-[40px] pr-[40px] pt-[10px] pb-[10px]">
+            Рассчитать
+          </button>
           <div className="relative flex">
             <div className="absolute h-[80px] border-l-[3px] border-dotted border-white left-1/2 top-0 transform -translate-x-1/2 mb-4"></div>
             <span className="absolute top-20 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
