@@ -62,7 +62,7 @@ export default function index() {
       <div className="md:w-4/5 grid grid-cols-2 md:grid-cols-3 grid-rows-2 align-center gap-[30px] mt-[10px] md:mt-[30px]">
         <div className="flex flex-col items-center md:justify-center">
           <div className="text-[60px] md:text-[80px] text-accent mb-4">
-            <CiDesktop className="iconSmall"/>
+            <CiDesktop className="iconSmall" />
           </div>
           <span className="text-center text-[14px] md:text-[16px]">
             Проектирование 1500 ₽/㎡
@@ -70,7 +70,7 @@ export default function index() {
         </div>
         <div className="flex flex-col items-center md:justify-center">
           <div className="text-[60px] md:text-[80px] text-accent mb-4">
-            <CiHome className="iconSmall"/>
+            <CiHome className="iconSmall" />
           </div>
           <span className="text-center text-[14px] md:text-[16px]">
             Визуализация дизайн проекта 1500 ₽/㎡
@@ -78,7 +78,7 @@ export default function index() {
         </div>
         <div className="flex flex-col items-center md:justify-center">
           <div className="text-[60px] md:text-[80px] text-accent mb-4">
-            <CiViewTimeline className="iconSmall"/>
+            <CiViewTimeline className="iconSmall" />
           </div>
           <span className="text-center text-[14px] md:text-[16px]">
             Эскизная часть проекта 1500 ₽/㎡
@@ -86,7 +86,7 @@ export default function index() {
         </div>
         <div className="flex flex-col items-center md:justify-center">
           <div className="text-[60px] md:text-[80px] text-accent mb-4">
-            <CiUnlock className="iconSmall"/>
+            <CiUnlock className="iconSmall" />
           </div>
           <span className="text-center text-[14px] md:text-[16px]">
             Дизай проект под ключ 1500 ₽/㎡
@@ -94,7 +94,7 @@ export default function index() {
         </div>
         <div className="flex flex-col items-center md:justify-center">
           <div className="text-[60px] md:text-[80px] text-accent mb-4">
-            <CiCrop className="iconSmall"/>
+            <CiCrop className="iconSmall" />
           </div>
           <span className="text-center text-[14px] md:text-[16px]">
             Обмерочный чертеж 100 ₽/㎡
@@ -102,7 +102,7 @@ export default function index() {
         </div>
         <div className="flex flex-col items-center md:justify-center">
           <div className="text-[60px] md:text-[80px] text-accent mb-4">
-            <CiMountain1 className="iconSmall"/>
+            <CiMountain1 className="iconSmall" />
           </div>
           <span className="text-center text-[14px] md:text-[16px]">
             Авторский надзор 50000 ₽/мес
