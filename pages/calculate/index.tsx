@@ -28,7 +28,7 @@ export default function index() {
         </div>
         <div className="bg-[#ff6219] w-screen md:w-2/6 md:h-full flex flex-col items-center justify-evenly md:p-8">
           <span className="mt-[10px] md:mt-0">Объект:</span>
-          <select className="w-[140px] md:w-1/2 text-white-500 bg-transparent text-[16px] text-4xl xl:text-3xl lg:text-2xl md:text-xl sm:text-l text-center border-b-2 border-c66900 border-t-0 border-l-0 border-r-0 border-rounded-0 outline-none resize-none whitespace-normal overflow-ellipsisalign-middle whitespace-nowrap select-auto cursor-pointer my-0 border-1 border-solid border-white-500">
+          <select className="w-[140px] md:w-1/2 text-white-500 text-center bg-transparent text-[16px] text-4xl xl:text-3xl lg:text-2xl md:text-xl sm:text-l text-center border-b-2 border-c66900 border-t-0 border-l-0 border-r-0 border-rounded-0 outline-none resize-none whitespace-normal overflow-ellipsisalign-middle whitespace-nowrap select-auto cursor-pointer my-0 border-1 border-solid border-white-500">
             <option value="option1">Выберите...</option>
             <option value="option2">Комната</option>
             <option value="option3">1-к квартира</option>
