@@ -25,6 +25,10 @@ module.exports = {
         primary: '#131424',
         secondary: '#393A47',
         accent: '#ff6219',
+        main: '#000000',
+      },
+      backgroundImage: {
+        site: 'url("/1.jpeg")',
       },
       animation: {
         'spin-slow': 'spin 6s linear infinite',
