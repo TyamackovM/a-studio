@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   CiHome,
   CiRead,
@@ -36,12 +37,30 @@ const calcData = [
 ];
 
 export default function index() {
+  const [formData, setFormData] = useState<{ space: string; type: string }>({
+    space: "",
+    type: "",
+  });
+
+  const handleChange = (
+    event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      [event.target.name]: event.target.value,
+    }));
+  };
   return (
     <div className="w-full h-full flex flex-col items-center lg:justify-center">
       <div className="w-full md:h-1/4 flex flex-col md:flex-row items-center justify-center">
         <div className="bg-[#ff6219] bg-opacity-80 lg:bg-opacity-100 h-max lg:rounded-l-lg w-screen lg:w-1/5 md:h-full flex flex-col items-center justify-evenly md:p-8">
           <span className="mt-[10px] md:mt-0">Площадь, ㎡ :</span>
-          <input className="w-[100px] md:w-3/5 text-white xl:text-4xl lg:text-2xl md:text-xl sm:text-l text-center border-b-2 border-white-500 border-t-0 border-l-0 border-r-0 rounded-none bg-transparent outline-none resize-none"></input>
+          <input
+            className="w-[100px] md:w-3/5 text-white xl:text-4xl lg:text-2xl md:text-xl sm:text-l text-center border-b-2 border-white-500 border-t-0 border-l-0 border-r-0 rounded-none bg-transparent outline-none resize-none"
+            value={formData.space}
+            onChange={handleChange}
+            name="space"
+          ></input>
           <div className="relative flex">
             <div className="hidden md:block absolute h-[80px] border-l-[3px] border-dotted border-white left-1/2 top-0 transform -translate-x-1/2 mb-4"></div>
             <span className="hidden md:block absolute top-20 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
@@ -51,13 +70,18 @@ export default function index() {
         </div>
         <div className="bg-[#ff6219] bg-opacity-80 lg:bg-opacity-100 w-screen lg:w-2/6 md:h-full flex flex-col items-center justify-evenly md:p-8">
           <span className="mt-[10px] md:mt-0">Объект:</span>
-          <select className="w-[120px]  justify-center md:w-[140px] lg:w-1/2 text-white-500 bg-transparent text-[16px] text-4xl xl:text-3xl lg:text-2xl md:text-xl sm:text-l text-center border-b-2 border-c66900 border-t-0 border-l-0 border-r-0 border-rounded-0 outline-none resize-none whitespace-normal overflow-ellipsisalign-middle whitespace-nowrap select-auto cursor-pointer my-0 border-1 border-solid border-white-500">
-            <option value="option1">Выберите...</option>
-            <option value="option2">Комната</option>
-            <option value="option3">1-к квартира</option>
-            <option value="option4">2-к квартира</option>
-            <option value="option5">3-к квартира</option>
-            <option value="option6">Коттедж</option>
+          <select
+            name="type"
+            onChange={handleChange}
+            value={formData.type}
+            className="w-[120px]  justify-center md:w-[140px] lg:w-1/2 text-white-500 bg-transparent text-[16px] text-4xl xl:text-3xl lg:text-2xl md:text-xl sm:text-l text-center border-b-2 border-c66900 border-t-0 border-l-0 border-r-0 border-rounded-0 outline-none resize-none whitespace-normal overflow-ellipsisalign-middle whitespace-nowrap select-auto cursor-pointer my-0 border-1 border-solid border-white-500"
+          >
+            <option value="">Выберите...</option>
+            <option value="Комната">Комната</option>
+            <option value="1-к квартира">1-к квартира</option>
+            <option value="2-к квартира">2-к квартира</option>
+            <option value="3-к квартира">3-к квартира</option>
+            <option value="Коттедж">Коттедж</option>
           </select>
           <div className="relative flex">
             <div className="hidden md:block absolute h-[80px] border-l-[3px] border-dotted border-white left-1/2 top-0 transform -translate-x-1/2 mb-4"></div>
