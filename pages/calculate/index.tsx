@@ -1,7 +1,3 @@
-import { MdArchitecture } from "react-icons/md";
-import { BiLogoVisualStudio, BiSolidKey } from "react-icons/bi";
-import { SiBlueprint } from "react-icons/si";
-import { RiGuideFill, RiSketching } from "react-icons/ri";
 import {
   CiHome,
   CiRead,
@@ -11,6 +7,33 @@ import {
   CiDesktop,
   CiViewTimeline,
 } from "react-icons/ci";
+
+const calcData = [
+  {
+    name: "Проектирование 1500 ₽/㎡",
+    icon: <CiDesktop className="iconSmall" />,
+  },
+  {
+    name: "Визуализация дизайн проекта 1500 ₽/㎡",
+    icon: <CiHome className="iconSmall" />,
+  },
+  {
+    name: "Эскизная часть проекта 1500 ₽/㎡",
+    icon: <CiViewTimeline className="iconSmall" />,
+  },
+  {
+    name: "Дизай проект под ключ 1500 ₽/㎡",
+    icon: <CiUnlock className="iconSmall" />,
+  },
+  {
+    name: "Обмерочный чертеж 100 ₽/㎡",
+    icon: <CiCrop className="iconSmall" />,
+  },
+  {
+    name: "Авторский надзор 50000 ₽/мес",
+    icon: <CiMountain1 className="iconSmall" />,
+  },
+];
 
 export default function index() {
   return (
@@ -60,54 +83,19 @@ export default function index() {
         ПРАЙС ЛИСТ
       </span>
       <div className="px-2 md:w-4/5 grid grid-cols-2 md:grid-cols-3 grid-rows-2 align-center gap-[30px] mt-[10px] md:mt-[30px]">
-        <div className="flex flex-col items-center md:justify-center">
-          <div className="text-[60px] md:text-[80px] text-accent mb-4">
-            <CiDesktop className="iconSmall" />
+        {calcData.map((data, index) => (
+          <div
+            key={index}
+            className="flex flex-col items-center md:justify-center"
+          >
+            <div className="text-[60px] md:text-[80px] text-accent mb-4">
+              {data.icon}
+            </div>
+            <span className="text-center text-[14px] md:text-[16px]">
+              {data.name}
+            </span>
           </div>
-          <span className="text-center text-[14px] md:text-[16px]">
-            Проектирование 1500 ₽/㎡
-          </span>
-        </div>
-        <div className="flex flex-col items-center md:justify-center">
-          <div className="text-[60px] md:text-[80px] text-accent mb-4">
-            <CiHome className="iconSmall" />
-          </div>
-          <span className="text-center text-[14px] md:text-[16px]">
-            Визуализация дизайн проекта 1500 ₽/㎡
-          </span>
-        </div>
-        <div className="flex flex-col items-center md:justify-center">
-          <div className="text-[60px] md:text-[80px] text-accent mb-4">
-            <CiViewTimeline className="iconSmall" />
-          </div>
-          <span className="text-center text-[14px] md:text-[16px]">
-            Эскизная часть проекта 1500 ₽/㎡
-          </span>
-        </div>
-        <div className="flex flex-col items-center md:justify-center">
-          <div className="text-[60px] md:text-[80px] text-accent mb-4">
-            <CiUnlock className="iconSmall" />
-          </div>
-          <span className="text-center text-[14px] md:text-[16px]">
-            Дизай проект под ключ 1500 ₽/㎡
-          </span>
-        </div>
-        <div className="flex flex-col items-center md:justify-center">
-          <div className="text-[60px] md:text-[80px] text-accent mb-4">
-            <CiCrop className="iconSmall" />
-          </div>
-          <span className="text-center text-[14px] md:text-[16px]">
-            Обмерочный чертеж 100 ₽/㎡
-          </span>
-        </div>
-        <div className="flex flex-col items-center md:justify-center">
-          <div className="text-[60px] md:text-[80px] text-accent mb-4">
-            <CiMountain1 className="iconSmall" />
-          </div>
-          <span className="text-center text-[14px] md:text-[16px]">
-            Авторский надзор 50000 ₽/мес
-          </span>
-        </div>
+        ))}
       </div>
     </div>
   );
