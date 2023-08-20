@@ -59,7 +59,7 @@ export default function index() {
       <span className="h2 mb-0 text-[24px] md:text-[32px] mt-[20px] md:mt-[120px]">
         ПРАЙС ЛИСТ
       </span>
-      <div className="md:w-4/5 grid grid-cols-2 md:grid-cols-3 grid-rows-2 align-center gap-[30px] mt-[10px] md:mt-[30px]">
+      <div className="px-2 md:w-4/5 grid grid-cols-2 md:grid-cols-3 grid-rows-2 align-center gap-[30px] mt-[10px] md:mt-[30px]">
         <div className="flex flex-col items-center md:justify-center">
           <div className="text-[60px] md:text-[80px] text-accent mb-4">
             <CiDesktop className="iconSmall" />
