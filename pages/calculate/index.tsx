@@ -7,6 +7,7 @@ import {
   CiMountain1,
   CiDesktop,
   CiViewTimeline,
+  CiWarning,
 } from "react-icons/ci";
 
 const calcData = [
@@ -42,6 +43,7 @@ export default function index() {
     type: "",
   });
 
+  const [warning, setWarning] = useState<boolean>(false);
   const handleChange = (
     event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
@@ -50,8 +52,23 @@ export default function index() {
       [event.target.name]: event.target.value,
     }));
   };
+  const handleClick = () => {
+    setWarning(true);
+    setTimeout(() => {
+      setWarning(false);
+    }, 3000);
+  };
   return (
     <div className="w-full h-full flex flex-col items-center lg:justify-center">
+      {warning ? (
+        <div className="flex rounded border-2 border-white-500 flex-row items-center justify-center mt-[10px] p-[10px] bg-[#ff6219] w-auto absolute top-0">
+          <CiWarning className="text-[40px]" />
+          <span>Заполните все поля корректно</span>
+        </div>
+      ) : (
+        ""
+      )}
+
       <div className="w-full md:h-1/4 flex flex-col md:flex-row items-center justify-center">
         <div className="bg-[#ff6219] bg-opacity-80 lg:bg-opacity-100 h-max lg:rounded-l-lg w-screen lg:w-1/5 md:h-full flex flex-col items-center justify-evenly md:p-8">
           <span className="mt-[10px] md:mt-0">Площадь, ㎡ :</span>
@@ -92,7 +109,10 @@ export default function index() {
         </div>
         <div className="bg-[#ff6219] bg-opacity-80 lg:bg-opacity-100 lg:rounded-r-lg w-screen lg:w-1/5 md:h-full flex flex-col items-center justify-evenly md:p-8">
           <span className="hidden md:inline">Готово</span>
-          <button className="mt-[20px] mb-[20px] md:mt-0 md:mb-0 border-2 text-[16px] lg:text-[22px] md:text-[20px] rounded px-[10px] py-[2px] sm:px-[35px] sm:py-[8px]">
+          <button
+            onClick={handleClick}
+            className="mt-[20px] mb-[20px] md:mt-0 md:mb-0 border-2 text-[16px] lg:text-[22px] md:text-[20px] rounded px-[10px] py-[2px] sm:px-[35px] sm:py-[8px]"
+          >
             Рассчитать
           </button>
           <div className="relative flex">
