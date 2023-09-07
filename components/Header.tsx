@@ -43,7 +43,7 @@ const Header = () => {
       >
         {navData.map((link, index) => {
           const isActive = link.path === pathname;
-          const iconClass = isActive ? "text-accent" : "text-main";
+          const iconClass = isActive ? "text-accent" : "text-white";
           return (
             <Link
               className={`relative flex 
