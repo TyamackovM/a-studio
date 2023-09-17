@@ -1,6 +1,6 @@
 import "../styles/globals.css";
 import { AppProps } from "next/app";
-import TawkMessengerReact from "@tawk.to/tawk-messenger-react";
+// import TawkMessengerReact from "@tawk.to/tawk-messenger-react";
 
 //? router
 import { useRouter } from "next/router";
@@ -20,10 +20,10 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
       <AnimatePresence mode="wait">
         <motion.div key={router.route} className="h-full">
           <Transition />
-          <TawkMessengerReact
+          {/* <TawkMessengerReact
             propertyId="64d8b031cc26a871b02ef4a4"
             widgetId="1h7sd5pgl"
-          />
+          /> */}
           <Component {...pageProps} />
         </motion.div>
       </AnimatePresence>
