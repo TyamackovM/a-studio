@@ -23,7 +23,7 @@ export const navData = [
   { name: "Компания", path: "/about", icon: <HiUser /> },
   { name: "Портфолио", path: "/portfolio", icon: <HiRectangleGroup /> },
   { name: "Расчет", path: "/calculate", icon: <MdCalculate /> },
-  { name: "Дизайны", path: "/design", icon: <FaProjectDiagram /> },
+  { name: "Стили", path: "/styles", icon: <FaProjectDiagram /> },
   { name: "Контакты", path: "/contact", icon: <HiEnvelope /> },
 ];
 

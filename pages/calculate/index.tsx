@@ -54,7 +54,7 @@ export default function index() {
     }));
   };
   const handleClick = () => {
-    if (!formData.space || !formData.type) {
+    if (!formData.space || !formData.type || !Number(formData.space)) {
       setWarning(true);
       setTimeout(() => {
         setWarning(false);
@@ -90,7 +90,7 @@ export default function index() {
       >
         {!buttonClicked ? (
           <div className="w-full md:h-1/4 flex flex-col md:flex-row items-center justify-center">
-            <div className="bg-[#ff6219] bg-opacity-80 lg:bg-opacity-100 h-max lg:rounded-l-lg w-screen lg:w-1/5 md:h-full flex flex-col items-center justify-evenly md:p-8">
+            <div className="bg-[#ff6219] bg-opacity-80 lg:bg-opacity-100 lg:rounded-l-lg w-screen lg:w-1/5 md:h-full flex flex-col items-center justify-evenly md:p-8">
               <span className="mt-[10px] md:mt-0">Площадь, ㎡ :</span>
               <input
                 className="w-[100px] md:w-3/5 text-white xl:text-4xl lg:text-2xl md:text-xl sm:text-l text-center border-b-2 border-white-500 border-t-0 border-l-0 border-r-0 rounded-none bg-transparent outline-none resize-none"
@@ -113,7 +113,9 @@ export default function index() {
                 value={formData.type}
                 className="w-[120px]  justify-center md:w-[140px] lg:w-1/2 text-white-500 bg-transparent text-[16px] text-4xl xl:text-3xl lg:text-2xl md:text-xl sm:text-l text-center border-b-2 border-c66900 border-t-0 border-l-0 border-r-0 border-rounded-0 outline-none resize-none whitespace-normal overflow-ellipsisalign-middle whitespace-nowrap select-auto cursor-pointer my-0 border-1 border-solid border-white-500"
               >
-                <option value="">Выберите...</option>
+                <option className="text-center" value="">
+                  Выберите...
+                </option>
                 <option value="Комнаты">Комната</option>
                 <option value="Однокомнатной квартиры">1-к квартира</option>
                 <option value="Двухкомнатной квартиры">2-к квартира</option>
@@ -145,11 +147,19 @@ export default function index() {
             </div>
           </div>
         ) : formData.space && formData.type && buttonClicked ? (
-          <div className="w-full md:h-1/4 flex flex-col items-center justify-evenly space-y-2 md:space-y-0 md:space-x-4">
-            <div className="text-center text-[42px]">Дизайн-проект</div>
-            <div className="text-[34px]">{formData.type}</div>
-            <div className="text-[34px]">{formData.space} м2</div>
-            <div className="text-[54px]">{+formData.space * 1500} ₽</div>
+          <div className="w-full md:h-1/4  flex flex-col mt-[10px] items-center justify-evenly space-y-2 max-sm:space-y-0 md:space-y-0 md:space-x-4">
+            <div className="text-center text-[42px] max-sm:text-[32px]">
+              Дизайн-проект
+            </div>
+            <div className="text-[34px] max-sm:text-[24px]">
+              {formData.type}
+            </div>
+            <div className="text-[34px] max-sm:text-[24px]">
+              {formData.space} м2
+            </div>
+            <div className="text-[54px] max-sm:text-[42px]">
+              {+formData.space * 1500} ₽
+            </div>
             <div>
               <button
                 onClick={handleBack}
@@ -164,7 +174,7 @@ export default function index() {
           </div>
         ) : (
           <div className="w-full md:h-1/4 flex flex-col md:flex-row items-center justify-center">
-            <div className="bg-[#ff6219] bg-opacity-80 lg:bg-opacity-100 h-max lg:rounded-l-lg w-screen lg:w-1/5 md:h-full flex flex-col items-center justify-evenly md:p-8">
+            <div className="bg-[#ff6219] bg-opacity-80 lg:bg-opacity-100 lg:rounded-l-lg w-screen lg:w-1/5 md:h-full flex flex-col items-center justify-evenly md:p-8">
               <span className="mt-[10px] md:mt-0">Площадь, ㎡ :</span>
               <input
                 className="w-[100px] md:w-3/5 text-white xl:text-4xl lg:text-2xl md:text-xl sm:text-l text-center border-b-2 border-white-500 border-t-0 border-l-0 border-r-0 rounded-none bg-transparent outline-none resize-none"
