@@ -28,9 +28,9 @@ module.exports = {
         main: '#000000',
         white: '#ffffff'
       },
-      backgroundImage: {
-        site: 'url("/1.jpeg")',
-      },
+      // backgroundImage: {
+      //   site: 'url("/1.jpeg")',
+      // },
       animation: {
         'spin-slow': 'spin 6s linear infinite',
       },
