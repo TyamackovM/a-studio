@@ -80,17 +80,17 @@ export default function ContactPage() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <BsWhatsapp className="text-5xl text-green-500 hover:text-green-700 cursor-pointer" />
+          <BsWhatsapp className="text-5xl text-[#D35400]  hover:text-green-700 cursor-pointer" />
         </a>
         <a
           href="https://t.me/your-telegram-username"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <BsTelegram className="text-5xl text-blue-500 hover:text-blue-700 cursor-pointer" />
+          <BsTelegram className="text-5xl text-[#D35400]  hover:text-blue-700 cursor-pointer" />
         </a>
-        <BsInstagram className="text-5xl text-red-500 hover:text-red-700 cursor-pointer" />
-        <BiSolidPhoneCall className="text-5xl text-purple-500 hover:text-purple-700 cursor-pointer" />
+        <BsInstagram className="text-5xl text-[#D35400] hover:text-red-700 cursor-pointer" />
+        <BiSolidPhoneCall className="text-5xl text-[#D35400]  hover:text-purple-700 cursor-pointer" />
       </div>
     </div>
   );
