@@ -3,8 +3,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // import swiper styles
 import "swiper/css";
-import "swiper/css/free-mode";
+// import "swiper/css/free-mode";
 import "swiper/css/pagination";
+import "swiper/css/effect-cube";
 
 // icons
 import {
@@ -19,7 +20,7 @@ import {
 import { FaArrowPointer } from "react-icons/fa6";
 
 // import required modules
-import { FreeMode, Pagination } from "swiper/modules";
+import { EffectCube, Pagination } from "swiper/modules";
 
 // service data
 export const serviceData = [
@@ -45,53 +46,39 @@ export const serviceData = [
 
 const ServiceSlider = () => {
   return (
-    <Swiper
-      breakpoints={{
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 15,
-        },
-
-        640: {
-          slidesPerView: 2,
-          spaceBetween: 15,
-        },
-      }}
-      freeMode={true}
-      pagination={{
-        clickable: true,
-      }}
-      modules={[FreeMode, Pagination]}
-      className="h-[240px] sm:h-[340px]"
-    >
-      {serviceData.map((item, index) => {
-        return (
-          <SwiperSlide key={index}>
-            <div className="text-center">{item.name}</div>
-            <div
-              className={`bg-cover ${item.image} bg-no-repeat bg-center text-main h-max rounded-lg px-6 py-8 flex sm:flex-col gap-x-6 sm:gap-x-0 group cursor-pointer hover:bg-[rgba(253,135,61,0.7)] transition-all duration-300`}
-            >
-              {/* icon */}
-              {/* <div className="text-4xl text-accent mb-4">{item.icon}</div> */}
-              {/* title & desc */}
-              <div className="mb-8">
-                {/* <div className="mb-2 text-lg ">{item.title}</div> */}
-                {/* <p className="max-w-[350px] leading-normal text-main ">
-                  {item.description}
-                </p> */}
+    <div className="flex justify-center items-center h-screen">
+      <Swiper
+        effect={"cube"}
+        grabCursor={true}
+        cubeEffect={{
+          shadow: true,
+          slideShadows: true,
+          shadowOffset: 20,
+          shadowScale: 0.94,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[EffectCube, Pagination]}
+        className="h-[650px] w-[900px]"
+      >
+        {serviceData.map((item, index) => {
+          return (
+            <SwiperSlide key={index}>
+              <div className="text-center text-[32px] mb-[15px]">
+                {item.name}
               </div>
-              {/* arrow */}
-              <div className="text-3xl self-end">
-                <FaArrowPointer className="group-hover:rotate-90 group-hover:text-accent transition-all duration-500" />
+              <div
+                className={`bg-cover ${item.image} h-[400px] bg-no-repeat bg-center cursor-pointer transition-all duration-300`}
+              ></div>
+              <div className="text-white text-[18px] h-[150px] flex justify-center items-center leading-normal text-center">
+                {item.description}
               </div>
-            </div>
-            <div className="text-white! max-w-[350px] leading-normal">
-              {item.description}
-            </div>
-          </SwiperSlide>
-        );
-      })}
-    </Swiper>
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
+    </div>
   );
 };
 
