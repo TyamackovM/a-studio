@@ -29,7 +29,7 @@ module.exports = {
         white: '#ffffff'
       },
       backgroundImage: {
-        site: 'url("/1.jpeg")',
+        // site: 'url("/1.jpeg")',
       },
       animation: {
         'spin-slow': 'spin 6s linear infinite',
