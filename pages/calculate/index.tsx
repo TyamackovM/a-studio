@@ -90,7 +90,7 @@ export default function index() {
       >
         {!buttonClicked ? (
           <div className="w-full md:h-1/4 flex flex-col md:flex-row items-center justify-center">
-            <div className="bg-[#ff6219] bg-opacity-80 lg:bg-opacity-100 lg:rounded-l-lg w-screen lg:w-1/5 md:h-full flex flex-col items-center justify-evenly md:p-8">
+            <div className="bg-[#D35400] bg-opacity-80 lg:bg-opacity-100 lg:rounded-l-lg w-screen lg:w-1/5 md:h-full flex flex-col items-center justify-evenly md:p-8">
               <span className="mt-[10px] md:mt-0">Площадь, ㎡ :</span>
               <input
                 className="w-[100px] md:w-3/5 text-white xl:text-4xl lg:text-2xl md:text-xl sm:text-l text-center border-b-2 border-white-500 border-t-0 border-l-0 border-r-0 rounded-none bg-transparent outline-none resize-none"
@@ -105,7 +105,7 @@ export default function index() {
                 </span>
               </div>
             </div>
-            <div className="bg-[#ff6219] bg-opacity-80 lg:bg-opacity-100 w-screen lg:w-2/6 md:h-full flex flex-col items-center justify-evenly md:p-8">
+            <div className="bg-[#D35400] bg-opacity-80 lg:bg-opacity-100 w-screen lg:w-2/6 md:h-full flex flex-col items-center justify-evenly md:p-8">
               <span className="mt-[10px] md:mt-0">Объект:</span>
               <select
                 name="type"
@@ -130,7 +130,7 @@ export default function index() {
                 </div>
               </div>
             </div>
-            <div className="bg-[#ff6219] bg-opacity-80 lg:bg-opacity-100 lg:rounded-r-lg w-screen lg:w-1/5 md:h-full flex flex-col items-center justify-evenly md:p-8">
+            <div className="bg-[#D35400] bg-opacity-80 lg:bg-opacity-100 lg:rounded-r-lg w-screen lg:w-1/5 md:h-full flex flex-col items-center justify-evenly md:p-8">
               <span className="hidden md:inline">Готово</span>
               <button
                 onClick={handleClick}
@@ -167,14 +167,14 @@ export default function index() {
               >
                 Назад
               </button>
-              <button className="bg-[#ff6219] text-white font-semibold py-2 px-4 rounded-full hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+              <button className="bg-[#D35400] text-white font-semibold py-2 px-4 rounded-full hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
                 Быстрый заказ
               </button>
             </div>
           </div>
         ) : (
           <div className="w-full md:h-1/4 flex flex-col md:flex-row items-center justify-center">
-            <div className="bg-[#ff6219] bg-opacity-80 lg:bg-opacity-100 lg:rounded-l-lg w-screen lg:w-1/5 md:h-full flex flex-col items-center justify-evenly md:p-8">
+            <div className="bg-[#D35400] bg-opacity-80 lg:bg-opacity-100 lg:rounded-l-lg w-screen lg:w-1/5 md:h-full flex flex-col items-center justify-evenly md:p-8">
               <span className="mt-[10px] md:mt-0">Площадь, ㎡ :</span>
               <input
                 className="w-[100px] md:w-3/5 text-white xl:text-4xl lg:text-2xl md:text-xl sm:text-l text-center border-b-2 border-white-500 border-t-0 border-l-0 border-r-0 rounded-none bg-transparent outline-none resize-none"
@@ -189,7 +189,7 @@ export default function index() {
                 </span>
               </div>
             </div>
-            <div className="bg-[#ff6219] bg-opacity-80 lg:bg-opacity-100 w-screen lg:w-2/6 md:h-full flex flex-col items-center justify-evenly md:p-8">
+            <div className="bg-[#D35400] bg-opacity-80 lg:bg-opacity-100 w-screen lg:w-2/6 md:h-full flex flex-col items-center justify-evenly md:p-8">
               <span className="mt-[10px] md:mt-0">Объект:</span>
               <select
                 name="type"
@@ -211,7 +211,7 @@ export default function index() {
                 </div>
               </div>
             </div>
-            <div className="bg-[#ff6219] bg-opacity-80 lg:bg-opacity-100 lg:rounded-r-lg w-screen lg:w-1/5 md:h-full flex flex-col items-center justify-evenly md:p-8">
+            <div className="bg-[#D35400] bg-opacity-80 lg:bg-opacity-100 lg:rounded-r-lg w-screen lg:w-1/5 md:h-full flex flex-col items-center justify-evenly md:p-8">
               <span className="hidden md:inline">Готово</span>
               <button
                 onClick={handleClick}

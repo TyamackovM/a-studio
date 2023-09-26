@@ -7,19 +7,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-cube";
 
-// icons
-import {
-  RxCrop,
-  RxDesktop,
-  RxPencil2,
-  RxReader,
-  RxRocket,
-  RxArrowTopRight,
-} from "react-icons/rx";
-
-import { FaArrowPointer } from "react-icons/fa6";
-
-// import required modules
 import { EffectCube, Pagination } from "swiper/modules";
 
 // service data
@@ -60,7 +47,7 @@ const ServiceSlider = () => {
           clickable: true,
         }}
         modules={[EffectCube, Pagination]}
-        className="h-[650px] w-[900px]"
+        className="max-sm:h-[550px] max-sm:w-[350px] sm:w-[350px] sm:h-[550px] md:w-[650px] md:h-[550px] xl:h-[650px] xl:w-[900px]"
       >
         {serviceData.map((item, index) => {
           return (
@@ -69,9 +56,9 @@ const ServiceSlider = () => {
                 {item.name}
               </div>
               <div
-                className={`bg-cover ${item.image} h-[400px] bg-no-repeat bg-center cursor-pointer transition-all duration-300`}
+                className={`bg-cover ${item.image} max-sm:h-[300px] sm:h-[300px] xl:h-[400px] bg-no-repeat bg-center cursor-pointer transition-all duration-300`}
               ></div>
-              <div className="text-white text-[18px] h-[150px] flex justify-center items-center leading-normal text-center">
+              <div className="text-white max-sm:text-[12px] sm:text-[14px] md:text-[15px] h-[150px] max-sm:h-[150px] flex justify-center items-center leading-normal text-center">
                 {item.description}
               </div>
             </SwiperSlide>
