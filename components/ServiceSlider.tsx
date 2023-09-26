@@ -7,19 +7,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-cube";
 
-// icons
-import {
-  RxCrop,
-  RxDesktop,
-  RxPencil2,
-  RxReader,
-  RxRocket,
-  RxArrowTopRight,
-} from "react-icons/rx";
-
-import { FaArrowPointer } from "react-icons/fa6";
-
-// import required modules
 import { EffectCube, Pagination } from "swiper/modules";
 
 // service data
