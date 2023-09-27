@@ -1,4 +1,7 @@
+"use client";
 import { Swiper, SwiperSlide } from "swiper/react";
+
+import { Image } from "antd";
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -44,21 +47,27 @@ export default function index() {
         }}
         pagination={true}
         modules={[EffectCoverflow, Pagination]}
-        className="w-[90%] h-[600px]"
+        className="max-sm:w-[100%] w-[90%] h-[600px]"
       >
         {projectsData?.map((item, index) => {
           return (
             <SwiperSlide key={index}>
-              <div className="text-center text-[22px] mb-[10px] w-[800px]">
+              <div className="text-center max-sm:text-[12px] text-[22px] mb-[10px] max-sm:w-[100%] w-[800px]">
                 {item.name}
               </div>
-              <div className="grid grid-cols-2 gap-[5px] w-[800px]">
+              <div className="grid max-sm:grid-cols-1 grid-cols-2 gap-[5px] max-sm:w-[100%] w-[800px]">
                 {item.images?.map((image, index) => (
-                  <div className="w-[397.5px] h-[250px] relative" key={index}>
-                    <img
+                  <div
+                    className="max-sm:w-[100%] max-sm:h-[130px] w-[397.5px] h-[250px] relative"
+                    key={index}
+                  >
+                    <Image
                       className="w-[100%] h-[100%] object-cover"
                       src={image}
                       alt="image"
+                      width={"100%"}
+                      height={"100%"}
+                      preview={{ toolbarRender: () => null }}
                     />
                   </div>
                 ))}
