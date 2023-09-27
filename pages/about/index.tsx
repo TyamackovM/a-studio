@@ -24,10 +24,10 @@ export const secondIcons = [
 
 export default function index() {
   return (
-    <div className="h-screen py-36 flex items-center flex-col justify-center">
+    <div className="about-container flex items-center flex-col xl:justify-center">
       <h1 className={`h1 ${jostReg.className}`}>ХОД ДИЗАЙН-ПРОЕКТА</h1>
       <h2 className={`h2 p-6 ${jostReg.className}`}>Схема разработки</h2>
-      <div className="flex justify-between mb-16 icon-row">
+      <div className="icon-grid">
         {firstIcons.map((circle, index) => (
           <>
             <div
@@ -40,12 +40,14 @@ export default function index() {
               <span className="text-center icon-text">{circle.title}</span>
             </div>
             {index !== firstIcons.length - 1 && (
-              <HiArrowLongRight className="arrow-icon text-accent" size={40} />
+              // <div className="arrow-container">
+                <HiArrowLongRight className="arrow-size text-accent" size={40} />
+              // </div>
             )}
           </>
         ))}
       </div>
-      <div className="flex justify-between icon-row">
+      <div className="icon-grid pb-icon">
         {secondIcons.map((circle, index) => (
           <>
             <div
@@ -58,7 +60,7 @@ export default function index() {
               <span className="text-center icon-text">{circle.title}</span>
             </div>
             {index !== secondIcons.length - 1 && (
-              <HiArrowLongRight className="arrow-icon text-accent" size={40} />
+              <HiArrowLongRight className="arrow-size text-accent" size={40} />
             )}
           </>
         ))}
