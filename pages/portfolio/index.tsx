@@ -47,18 +47,18 @@ export default function index() {
         }}
         pagination={true}
         modules={[EffectCoverflow, Pagination]}
-        className="max-md:w-[100%] w-[90%] h-[610px]"
+        className="max-xl:w-[100%] w-[90%] h-[610px]"
       >
         {projectsData?.map((item, index) => {
           return (
             <SwiperSlide key={index}>
-              <div className="text-center max-sm:text-[12px] md:text-[13px] text-[22px] mb-[10px] max-md:w-[100%] w-[800px]">
+              <div className="text-center max-sm:text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[20px] text-[22px] mb-[10px] max-xl:w-[100%] w-[100%px]">
                 {item.name}
               </div>
-              <div className="grid max-md:grid-cols-1 grid-cols-2 gap-[5px] max-md:w-[100%] w-[800px]">
+              <div className="grid max-lg:grid-cols-1 grid-cols-2 gap-[5px] max-xl:w-[100%] w-[100%]">
                 {item.images?.map((image, index) => (
                   <div
-                    className="max-md:w-[100%] max-md:h-[130px] w-[397.5px] h-[250px] relative"
+                    className="max-lg:w-[100%] lg:w-[100%] max-lg:h-[130px] w-[100%] h-[250px] relative"
                     key={index}
                   >
                     <Image
