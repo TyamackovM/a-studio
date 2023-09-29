@@ -39,7 +39,7 @@ export default function index() {
               key={index}
               className="flex flex-col items-center justify-center icon-container"
             >
-              <div className="bg-white rounded-full p-4 text-main mb-2 w-20 h-20 flex items-center justify-center">
+              <div className="bg-white rounded-full p-4 text-main mb-2 w-20 h-20 flex items-center justify-center circle-icon">
                 {circle.icon}
               </div>
               <span className="text-center icon-text">{circle.title}</span>
@@ -59,7 +59,7 @@ export default function index() {
               key={index}
               className="flex flex-col items-center justify-center icon-container"
             >
-              <div className="bg-white rounded-full p-4 text-main mb-2 w-20 h-20 flex items-center justify-center">
+              <div className="bg-white rounded-full p-4 text-main mb-2 w-20 h-20 flex items-center justify-center circle-icon">
                 {circle.icon}
               </div>
               <span className="text-center icon-text">{circle.title}</span>
