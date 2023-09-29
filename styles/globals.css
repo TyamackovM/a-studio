@@ -206,7 +206,7 @@
     }
 
     .circle-icon {
-      transform: scale(0.6);
+      transform: scale(0.5);
     }
 
     .arrow-size {
@@ -224,8 +224,32 @@
   }
 
   @media screen and (min-width: 1025px) and (max-width: 1200px) {
-    .icon-grid {
+    /* .icon-grid {
       margin-left: 150px;
+    } */
+
+    .about-container {
+      padding-top: 2rem;
+      padding-bottom: 0% !important;
+    }
+
+    .circle-icon {
+      transform: scale(0.6);
+    }
+
+    .arrow-size {
+      transform: scale(0.8);
+    }
+
+    .icon-text {
+      font-size: 15px;
+    }
+
+    .icon-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 100px 50px);
+      gap: 1rem;
+      margin-bottom: 50px;
     }
   }
 
