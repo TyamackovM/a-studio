@@ -22,6 +22,11 @@ export const secondIcons = [
   { title: "Начало ремонта", icon: <MdImagesearchRoller size={60} /> },
 ];
 
+export const icons = [
+  ...firstIcons,
+  ...secondIcons
+];
+
 export default function index() {
   return (
     <div className="about-container flex items-center flex-col xl:justify-center">

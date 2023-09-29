@@ -82,6 +82,7 @@
   .arrow-size {
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 100%;
   }
 
@@ -120,7 +121,7 @@
 
     .icon-grid {
       display: grid;
-      grid-template-columns: repeat(1, 60px);
+      grid-template-columns: repeat(1, 50px);
       gap: 1rem;
       margin-bottom: 50px;
     }
@@ -132,6 +133,13 @@
     .about-container {
       padding-top: 1rem /* 144px */;
       padding-bottom: 9rem /* 144px */;
+    }
+
+    .arrow-size {
+      transform: rotate(90deg);
+      grid-column-end: span 1; 
+      width: 100%;
+      height: auto;
     }
   }
 
@@ -151,6 +159,14 @@
       padding-top: 1rem /* 144px */;
       padding-bottom: 9rem /* 144px */;
     }
+
+    .arrow-size {
+      transform: rotate(90deg) scale(0.3);
+      grid-column-end: span 1; 
+      width: 100%;
+      height: auto;
+    }
+
   }
 
   @media screen and (min-width: 551px) and (max-width: 920px) {
