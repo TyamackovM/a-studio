@@ -12,15 +12,15 @@ import {
 
 const calcData = [
   {
-    name: "Проектирование 1500 ₽/㎡",
+    name: "Проектирование 500 ₽/㎡",
     icon: <CiDesktop className="iconSmall" />,
   },
   {
-    name: "Визуализация дизайн проекта 1500 ₽/㎡",
+    name: "Визуализация дизайн проекта 500 ₽/㎡",
     icon: <CiHome className="iconSmall" />,
   },
   {
-    name: "Эскизная часть проекта 1500 ₽/㎡",
+    name: "Планировочные решения 500 ₽/㎡",
     icon: <CiViewTimeline className="iconSmall" />,
   },
   {
