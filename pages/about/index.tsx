@@ -26,7 +26,7 @@ export const icons = [...firstIcons, ...secondIcons];
 
 export default function index() {
   return (
-    <div className="about-container flex items-center flex-col xl:justify-center">
+    <div className="about-container overflow-auto flex items-center flex-col xl:justify-center">
       {/* <h1 className={`h1 ${jostReg.className}`}>Этапы дизайн проекта</h1> */}
       <h2 className={`h2 p-6 ${jostReg.className}`}>Этапы дизайн проекта</h2>
       <div className="icon-grid">

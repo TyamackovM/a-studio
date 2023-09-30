@@ -53,7 +53,7 @@ export const serviceData = [
 
 const ServiceSlider = () => {
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="flex justify-center items-center max-xl:mt-[40px] xl:h-screen">
       <Swiper
         effect={"cube"}
         grabCursor={true}
