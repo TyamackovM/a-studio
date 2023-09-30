@@ -4,8 +4,8 @@ import { BiSolidPhoneCall } from "react-icons/bi";
 export default function ContactPage() {
   return (
     <div className="bg-black min-h-screen flex flex-col justify-center max-sm:justify-start max-sm:mt-[10px] items-center text-white">
-      <div className="shadow-md border border-white rounded px-4 py-6 max-w-md w-full text-black max-sm:w-[380px] md:w-2/3 sm:py-8 sm:px-6">
-        <h2 className="text-2xl text-white font-semibold mb-4">
+      <div className="shadow-md md:border border-white rounded px-4 py-6 max-w-md w-full text-black max-md:w-[380px] md:w-2/3 sm:py-8 sm:px-6">
+        <h2 className="text-2xl max-md:text-center text-white font-semibold mb-4">
           Напишите нам:
         </h2>
         <div className="mb-2 sm:mb-4">
@@ -64,7 +64,7 @@ export default function ContactPage() {
             placeholder="Ваше сообщение"
           ></textarea>
         </div>
-        <div className="flex items-center justify-between">
+        <div className="flex items-center max-md:justify-center justify-between">
           <button
             className="bg-black hover:bg-[#ff6219] text-white border border-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             type="submit"
