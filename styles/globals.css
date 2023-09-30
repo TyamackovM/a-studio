@@ -20,7 +20,7 @@
 
 @layer base {
   body {
-    @apply bg-secondary leading-relaxed;
+    @apply bg-secondary leading-relaxed overflow-hidden;
   }
   .page {
     @apply w-full h-screen;
@@ -50,7 +50,7 @@
     width: 160px;
     min-height: 100px;
   }
-  
+
   .arrow-icon {
     margin-left: 16px;
     margin-right: 16px;
@@ -75,8 +75,8 @@
 
   .about-container {
     height: 100vh;
-    padding-top: 9rem/* 144px */;
-    padding-bottom: 9rem/* 144px */;
+    padding-top: 9rem /* 144px */;
+    padding-bottom: 9rem /* 144px */;
   }
 
   .arrow-size {
@@ -131,17 +131,16 @@
     }
 
     .about-container {
-      padding-top: 1rem/* 144px */;
-      padding-bottom: 9rem/* 144px */;
+      padding-top: 1rem /* 144px */;
+      padding-bottom: 9rem /* 144px */;
     }
 
     .arrow-size {
       transform: rotate(90deg);
-      grid-column-end: span 1; 
+      grid-column-end: span 1;
       width: 100%;
       height: auto;
     }
-
   }
 
   @media screen and (min-width: 416px) and (max-width: 550px) {
@@ -157,17 +156,16 @@
     }
 
     .about-container {
-      padding-top: 1rem/* 144px */;
-      padding-bottom: 9rem/* 144px */;
+      padding-top: 1rem /* 144px */;
+      padding-bottom: 9rem /* 144px */;
     }
 
     .arrow-size {
       transform: rotate(90deg) scale(0.3);
-      grid-column-end: span 1; 
+      grid-column-end: span 1;
       width: 100%;
       height: auto;
     }
-
   }
 
   @media screen and (min-width: 551px) and (max-width: 920px) {
@@ -179,8 +177,8 @@
     }
 
     .about-container {
-      padding-top: 1rem/* 144px */;
-      padding-bottom: 9rem/* 144px */;
+      padding-top: 1rem /* 144px */;
+      padding-bottom: 9rem /* 144px */;
     }
   }
 
@@ -193,8 +191,8 @@
     }
 
     .about-container {
-      padding-top: 1rem/* 144px */;
-      padding-bottom: 9rem/* 144px */;
+      padding-top: 1rem /* 144px */;
+      padding-bottom: 9rem /* 144px */;
     }
 
     .pb-icon {

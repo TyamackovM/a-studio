@@ -1,19 +1,17 @@
 "use client";
 import React from "react";
-import ServiceSlider from "../components/ServiceSlider";
 import { jostReg } from "../fonts/fonts";
 import { Fade } from "react-awesome-reveal";
 
 export default function index() {
   return (
-    <div className="bg-cover bg-no-repeat py-16 sm:py-16 md:py-16 lg:py-12 xl:py-36 flex items-center flex-col justify-center">
+    <div className="flex items-center flex-col max-lg:py-36 max-lg:justify-start justify-center h-screen">
       <div
         className="w-0 h-0
   border-l-[120px] max-md:border-l-[80px] border-l-transparent
   border-b-[210px] max-md:border-b-[130px] border-b-white
   border-r-[120px] max-md:border-r-[80px] border-r-transparent"
       ></div>
-
       <h2
         className={`h3 max-md:text-[11px] text-white mb-0 mt-[5px] ${jostReg.className}`}
       >

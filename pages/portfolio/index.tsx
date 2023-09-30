@@ -32,7 +32,7 @@ export const projectsData = [
 
 export default function index() {
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="flex justify-start items-center max-xl:mt-[30px] xl:h-screen">
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
@@ -52,7 +52,7 @@ export default function index() {
         {projectsData?.map((item, index) => {
           return (
             <SwiperSlide key={index}>
-              <div className="text-center max-sm:text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[20px] text-[22px] mb-[10px] max-xl:w-[100%] w-[100%px]">
+              <div className="text-center max-sm:text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[20px] text-[22px] mb-[10px] max-xl:w-[100%] w-[100%]">
                 {item.name}
               </div>
               <div className="grid max-lg:grid-cols-1 grid-cols-2 gap-[5px] max-xl:w-[100%] w-[100%]">
