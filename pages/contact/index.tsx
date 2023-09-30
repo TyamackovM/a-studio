@@ -3,7 +3,7 @@ import { BiSolidPhoneCall } from "react-icons/bi";
 
 export default function ContactPage() {
   return (
-    <div className="bg-black min-h-screen flex flex-col justify-center max-sm:justify-start max-sm:mt-[10px] items-center text-white">
+    <div className="bg-black min-h-screen flex flex-col justify-center max-md:justify-start lg:justify-start lg:mt-[10px] max-md:mt-[10px] items-center text-white">
       <div className="shadow-md md:border border-white rounded px-4 py-6 max-w-md w-full text-black max-md:w-[380px] md:w-2/3 sm:py-8 sm:px-6">
         <h2 className="text-2xl max-md:text-center text-white font-semibold mb-4">
           Напишите нам:
@@ -73,8 +73,10 @@ export default function ContactPage() {
           </button>
         </div>
       </div>
-      <p className="mt-4 text-2xl text-white">другие способы связи:</p>
-      <div className="mt-4 flex flex-wrap space-x-4 items-center justify-center sm:justify-between">
+      <p className="max-xl:mt-[2px] mt-4 text-2xl text-white">
+        другие способы связи:
+      </p>
+      <div className="max-xl:mt-[5px] mt-4 flex flex-wrap space-x-4 items-center justify-center sm:justify-between">
         <a
           href="https://wa.me/your-whatsapp-number"
           target="_blank"
