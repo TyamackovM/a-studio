@@ -6,7 +6,7 @@ import { Fade } from "react-awesome-reveal";
 
 export default function index() {
   return (
-    <div className="bg-cover bg-no-repeat py-36 flex items-center flex-col justify-center">
+    <div className="bg-cover bg-no-repeat py-16 sm:py-16 md:py-16 lg:py-12 xl:py-36 flex items-center flex-col justify-center">
       <div
         className="w-0 h-0
   border-l-[120px] max-md:border-l-[80px] border-l-transparent

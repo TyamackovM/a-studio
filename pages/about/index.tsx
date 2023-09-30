@@ -22,11 +22,16 @@ export const secondIcons = [
   { title: "Начало ремонта", icon: <MdImagesearchRoller size={60} /> },
 ];
 
+export const icons = [
+  ...firstIcons,
+  ...secondIcons
+];
+
 export default function index() {
   return (
     <div className="about-container flex items-center flex-col xl:justify-center">
       <h1 className={`h1 ${jostReg.className}`}>ХОД ДИЗАЙН-ПРОЕКТА</h1>
-      <h2 className={`h2 mb-[60px] ${jostReg.className}`}>Схема разработки</h2>
+      <h2 className={`h2 p-6 ${jostReg.className}`}>Схема разработки</h2>
       <div className="icon-grid">
         {firstIcons.map((circle, index) => (
           <>
@@ -34,21 +39,15 @@ export default function index() {
               key={index}
               className="flex flex-col items-center justify-center icon-container"
             >
-              <div className="bg-white rounded-full p-4 text-main mb-2 w-20 h-20 flex items-center justify-center">
+              <div className="bg-white rounded-full p-4 text-main mb-2 w-20 h-20 flex items-center justify-center circle-icon">
                 {circle.icon}
               </div>
               <span className="text-center icon-text">{circle.title}</span>
             </div>
-            {index !== secondIcons.length - 1 ? (
-              <HiArrowLongRight
-                className="md:arrow-size text-accent"
-                size={40}
-              />
-            ) : (
-              <HiArrowLongRight
-                className="max-md:block md:hidden md:arrow-size text-accent"
-                size={40}
-              />
+            {index !== firstIcons.length - 1 && (
+              // <div className="arrow-container">
+                <HiArrowLongRight className="arrow-size text-accent" size={40} />
+              // </div>
             )}
           </>
         ))}
@@ -60,16 +59,13 @@ export default function index() {
               key={index}
               className="flex flex-col items-center justify-center icon-container"
             >
-              <div className="bg-white rounded-full p-4 text-main mb-2 w-20 h-20 flex items-center justify-center">
+              <div className="bg-white rounded-full p-4 text-main mb-2 w-20 h-20 flex items-center justify-center circle-icon">
                 {circle.icon}
               </div>
               <span className="text-center icon-text">{circle.title}</span>
             </div>
             {index !== secondIcons.length - 1 && (
-              <HiArrowLongRight
-                className="md:arrow-size text-accent"
-                size={40}
-              />
+              <HiArrowLongRight className="arrow-size text-accent" size={40} />
             )}
           </>
         ))}
