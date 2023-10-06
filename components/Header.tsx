@@ -20,7 +20,7 @@ import React from "react";
 
 export const navData = [
   { name: "Главная", path: "/", icon: <HiHome /> },
-  { name: "Компания", path: "/about", icon: <HiUser /> },
+  { name: "Этапы", path: "/about", icon: <HiUser /> },
   { name: "Портфолио", path: "/portfolio", icon: <HiRectangleGroup /> },
   { name: "Расчет", path: "/calculate", icon: <MdCalculate /> },
   { name: "Стили", path: "/styles", icon: <FaProjectDiagram /> },
