@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Spin } from "antd";
 import {
   CiHome,
   CiRead,
@@ -45,6 +46,7 @@ export default function index() {
 
   const [warning, setWarning] = useState<boolean>(false);
   const [buttonClicked, setButtonClicked] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(false);
   const handleChange = (
     event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
@@ -61,7 +63,13 @@ export default function index() {
       }, 2000);
       setButtonClicked(false);
     } else {
-      setButtonClicked(true);
+      // setButtonClicked(true);
+      setLoading(true);
+
+      setTimeout(() => {
+        setLoading(false); // Set loading to false after the fake delay
+        setButtonClicked(true);
+      }, 3000); // Adjust the delay time as needed
     }
   };
   const handleBack = () => {
@@ -83,6 +91,7 @@ export default function index() {
       ) : (
         ""
       )}
+      {loading && <Spin size="large" />}
       <div
         className={`w-full ${
           warning ? "opacity-20" : "opacity-100"

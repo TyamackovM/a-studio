@@ -1,9 +1,9 @@
-import { BsWhatsapp, BsTelegram, BsInstagram } from "react-icons/bs";
+import { BsWhatsapp, BsTelegram } from "react-icons/bs";
 import { BiSolidPhoneCall } from "react-icons/bi";
 
 export default function ContactPage() {
   return (
-    <div className="bg-black min-h-screen flex flex-col justify-center max-md:justify-start lg:justify-start lg:mt-[10px] max-md:mt-[10px] items-center text-white">
+    <div className="bg-black min-h-screen flex flex-col justify-center max-md:justify-start lg:justify-start xl:justify-center lg:mt-[10px] max-md:mt-[10px] items-center text-white">
       <div className="shadow-md md:border border-white rounded px-4 py-6 max-w-md w-full text-black max-md:w-[380px] md:w-2/3 sm:py-8 sm:px-6">
         <h2 className="text-2xl max-md:text-center text-white font-semibold mb-4">
           Напишите нам:
@@ -78,21 +78,22 @@ export default function ContactPage() {
       </p>
       <div className="max-xl:mt-[5px] mt-4 flex flex-wrap space-x-4 items-center justify-center sm:justify-between">
         <a
-          href="https://wa.me/your-whatsapp-number"
+          href="https://wa.me/+79255024212"
           target="_blank"
           rel="noopener noreferrer"
         >
           <BsWhatsapp className="text-5xl text-[#D35400]  hover:text-green-700 cursor-pointer" />
         </a>
         <a
-          href="https://t.me/your-telegram-username"
+          href="https://t.me/+79255024212"
           target="_blank"
           rel="noopener noreferrer"
         >
           <BsTelegram className="text-5xl text-[#D35400]  hover:text-blue-700 cursor-pointer" />
         </a>
-        <BsInstagram className="text-5xl text-[#D35400] hover:text-red-700 cursor-pointer" />
-        <BiSolidPhoneCall className="text-5xl text-[#D35400]  hover:text-purple-700 cursor-pointer" />
+        <a href="tel:+79255024212">
+          <BiSolidPhoneCall className="text-5xl text-[#D35400]  hover:text-purple-700 cursor-pointer" />
+        </a>
       </div>
     </div>
   );
