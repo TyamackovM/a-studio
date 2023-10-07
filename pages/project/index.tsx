@@ -1,4 +1,5 @@
 import { jostReg } from "../../fonts/fonts";
+import { Fade } from "react-awesome-reveal";
 
 import { IoIosMail, IoMdResize, IoMdCube, IoMdColorFill } from "react-icons/io";
 import { PiCoffeeFill, PiDoorOpenFill } from "react-icons/pi";
@@ -27,9 +28,8 @@ export const icons = [...firstIcons, ...secondIcons];
 export default function index() {
   return (
     <div className="about-container overflow-auto flex items-center flex-col xl:justify-center">
-      {/* <h1 className={`h1 ${jostReg.className}`}>Этапы дизайн проекта</h1> */}
       <h2 className={`h2 p-6 ${jostReg.className}`}>Этапы дизайн проекта</h2>
-      <div className="icon-grid">
+      <div className="icon-grid xl:flex xl:justify-center">
         {firstIcons.map((circle, index) => (
           <>
             <div
@@ -42,14 +42,17 @@ export default function index() {
               <span className="text-center icon-text">{circle.title}</span>
             </div>
             {index !== firstIcons.length - 1 && (
-              // <div className="arrow-container">
-              <HiArrowLongRight className="arrow-size text-accent" size={40} />
-              // </div>
+              <Fade delay={index * 700}>
+                <HiArrowLongRight
+                  className="arrow-size text-accent"
+                  size={40}
+                />
+              </Fade>
             )}
           </>
         ))}
       </div>
-      <div className="icon-grid pb-icon">
+      <div className="icon-grid pb-icon xl:flex xl:justify-center">
         {secondIcons.map((circle, index) => (
           <>
             <div
@@ -62,7 +65,12 @@ export default function index() {
               <span className="text-center icon-text">{circle.title}</span>
             </div>
             {index !== secondIcons.length - 1 && (
-              <HiArrowLongRight className="arrow-size text-accent" size={40} />
+              <Fade delay={(index + 4) * 700}>
+                <HiArrowLongRight
+                  className="arrow-size text-accent"
+                  size={40}
+                />
+              </Fade>
             )}
           </>
         ))}

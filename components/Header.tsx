@@ -8,8 +8,9 @@ import {
   HiEnvelope,
 } from "react-icons/hi2";
 
-import { MdCalculate } from "react-icons/md";
+import { MdCalculate, MdStyle } from "react-icons/md";
 import { FaProjectDiagram } from "react-icons/fa";
+import { PiStepsFill } from "react-icons/pi";
 
 //? next link
 import Link from "next/link";
@@ -20,10 +21,10 @@ import React from "react";
 
 export const navData = [
   { name: "Главная", path: "/", icon: <HiHome /> },
-  { name: "Этапы", path: "/about", icon: <HiUser /> },
+  { name: "Проект", path: "/project", icon: <PiStepsFill /> },
   { name: "Портфолио", path: "/portfolio", icon: <HiRectangleGroup /> },
   { name: "Расчет", path: "/calculate", icon: <MdCalculate /> },
-  { name: "Стили", path: "/styles", icon: <FaProjectDiagram /> },
+  { name: "Интерьеры", path: "/styles", icon: <MdStyle /> },
   { name: "Контакты", path: "/contact", icon: <HiEnvelope /> },
 ];
 
