@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "@emotion/react": "^11.11.1",
     "@next/font": "^13.4.13",
     "@tawk.to/tawk-messenger-react": "^2.0.2",
