@@ -9,18 +9,19 @@ export default function ContactPage() {
   const [form, setFrom] = useState<{
     name: string;
     email: string;
+    phone: string;
     message: string;
-  }>({ name: "", email: "", message: "" });
+  }>({ name: "", email: "", phone: "", message: "" });
   const [loading, setLoading] = useState<boolean>(false);
   const [messageApi, contextHolder] = message.useMessage();
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFrom({ ...form, [name]: value });
   };
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
-    if (!form.name || !form.email || !form.message) {
+    if (!form.name || !form.email || !form.message || !form.phone) {
       messageApi.open({
         type: "warning",
         content: "Заполните все поля",
@@ -29,16 +30,16 @@ export default function ContactPage() {
       setLoading(true);
       emailjs
         .send(
-          "service_rpyqyim",
-          "template_h0yerqu",
+          "service_2o49xls",
+          "template_evphdnn",
           {
             from_name: form.name,
-            to_name: "Aleksei",
+            to_name: "Анжелика",
             from_email: form.email,
-            to_email: "dev@alekseivlasov.com",
-            message: form.message,
+            to_email: "admin@astyle-ds.com",
+            message: [form.message, `tel:${form.phone}`],
           },
-          "M0rIOvWqiYL3KNJMN"
+          "yRAtmDVat0kOptz6p"
         )
         .then(
           () => {
@@ -47,11 +48,10 @@ export default function ContactPage() {
               type: "success",
               content: "Спасибо! Мы скоро с вами свяжемся.",
             });
-            setFrom({ name: "", email: "", message: "" });
+            setFrom({ name: "", email: "", phone: "", message: "" });
           },
           (error) => {
             setLoading(false);
-            console.log(error);
             messageApi.open({
               type: "error",
               content: "Что-то пошло не так.",
@@ -82,6 +82,9 @@ export default function ContactPage() {
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="name"
             type="text"
+            name="name"
+            value={form.name}
+            onChange={handleChange}
             placeholder="Ваше имя"
           />
         </div>
@@ -96,8 +99,8 @@ export default function ContactPage() {
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="email"
             type="text"
-            name="name"
-            value={form.name}
+            name="email"
+            value={form.email}
             onChange={handleChange}
             placeholder="Ваш email"
           />
@@ -114,8 +117,8 @@ export default function ContactPage() {
             id="number"
             type="text"
             placeholder="Ваш номер"
-            name="email"
-            value={form.email}
+            name="phone"
+            value={form.phone}
             onChange={handleChange}
           />
         </div>
