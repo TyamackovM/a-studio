@@ -5,7 +5,7 @@ import { BiSolidPhoneCall } from "react-icons/bi";
 import { message } from "antd";
 
 export default function ContactPage() {
-  const formRef = useRef();
+  const formRef = useRef<HTMLFormElement>(null);
   const [form, setFrom] = useState<{
     name: string;
     email: string;
@@ -19,8 +19,13 @@ export default function ContactPage() {
     const { name, value } = e.target;
     setFrom({ ...form, [name]: value });
   };
-  const handleSubmit = (e: React.ChangeEvent<HTMLInputElement>) => {
-    e.preventDefault();
+
+  const handleTextareaChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFrom({ ...form, [name]: value });
+  };
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
     if (!form.name || !form.email || !form.message || !form.phone) {
       messageApi.open({
         type: "warning",
@@ -130,13 +135,13 @@ export default function ContactPage() {
             Сообщение
           </label>
           <textarea
-            rows="4"
+            rows={4}
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="message"
             placeholder="Ваше сообщение"
             name="message"
             value={form.message}
-            onChange={handleChange}
+            onChange={handleTextareaChange}
           ></textarea>
         </div>
         <div className="flex items-center max-md:justify-center justify-between">
