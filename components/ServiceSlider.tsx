@@ -1,8 +1,6 @@
 // import swiper react components
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { Image } from "antd";
-
 // import swiper styles
 import "swiper/css";
 // import "swiper/css/free-mode";
@@ -135,14 +133,14 @@ const ServiceSlider = () => {
         modules={[EffectCube, Pagination]}
         className="max-sm:h-[550px] max-sm:w-[350px] sm:w-[350px] sm:h-[550px] md:w-[650px] md:h-[550px] xl:h-[650px] xl:w-[900px]"
       >
-        {serviceData.map((item, index) => {
+        {serviceData?.map((item, index) => {
           return (
             <SwiperSlide key={index}>
               <div className="text-center text-[32px] mb-[15px]">
                 {item.name}
               </div>
               <div
-                className={`bg-cover ${item.image} max-sm:h-[300px] sm:h-[300px] xl:h-[400px] bg-no-repeat bg-center cursor-pointer transition-all duration-300`}
+                className={`bg-cover ${item?.image} max-sm:h-[300px] sm:h-[300px] xl:h-[400px] bg-no-repeat bg-center cursor-pointer transition-all duration-300`}
               ></div>
 
               <div className="text-white max-sm:text-[12px] sm:text-[14px] md:text-[15px] h-[150px] max-sm:h-[150px] flex justify-center items-center leading-normal text-center">

@@ -2,6 +2,7 @@ import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { BsWhatsapp, BsTelegram } from "react-icons/bs";
 import { BiSolidPhoneCall } from "react-icons/bi";
+import { MdOutlineAlternateEmail } from "react-icons/md";
 import { message } from "antd";
 
 export default function ContactPage() {
@@ -171,9 +172,35 @@ export default function ContactPage() {
         >
           <BsTelegram className="text-5xl text-[#D35400]  hover:text-blue-700 cursor-pointer" />
         </a>
+        <a href="mailto:admin@astyle-ds.com" target="_blank">
+          <MdOutlineAlternateEmail className="text-5xl text-[#D35400]  hover:text-red-700 cursor-pointer" />
+          <span className="tooltip">admin@astyle-ds.com</span>
+        </a>
         <a href="tel:+79255024212">
           <BiSolidPhoneCall className="text-5xl text-[#D35400]  hover:text-purple-700 cursor-pointer" />
+          <span className="tooltip">+79255024212</span>
         </a>
+        <style jsx>{`
+          .tooltip {
+            display: none;
+            position: absolute;
+            background: #333;
+            color: white;
+            border-radius: 4px;
+            padding: 4px 8px;
+            font-size: 14px;
+            white-space: nowrap;
+            opacity: 0;
+            transition: opacity 0.2s ease-in-out;
+            margin-top: -5px;
+            z-index: 1;
+          }
+
+          a:hover .tooltip {
+            display: inline-block;
+            opacity: 1;
+          }
+        `}</style>
       </div>
     </div>
   );
