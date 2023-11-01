@@ -1,11 +1,11 @@
 // import swiper react components
-"use client";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // import swiper styles
 import "swiper/css";
 // import "swiper/css/free-mode";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 import "swiper/css/effect-cube";
 import "swiper/css/effect-fade";
 
@@ -130,17 +130,20 @@ const ServiceSlider = () => {
         pagination={{
           clickable: true,
         }}
+        // navigation={true}
         navigation={{
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         }}
         modules={[Keyboard, Pagination, Navigation]}
-        className="text=white max-sm:h-[550px] max-sm:w-[350px] sm:w-[350px] sm:h-[550px] md:w-[650px] md:h-[550px] xl:h-[650px] xl:w-[900px]"
+        className="text-white max-sm:h-[550px] max-sm:w-[350px] sm:w-[350px] sm:h-[550px] md:w-[650px] md:h-[550px] xl:h-[650px] xl:w-[900px]"
       >
+        <div className="swiper-button-next color-white z-[1000]"></div>
+        <div className="swiper-button-prev text-white"></div>
         {serviceData?.map((item, index) => {
           return (
             <SwiperSlide key={index}>
-              <div className="slide-container">
+              <div className="slide-container z-[190]">
                 <div className="text-center text-[32px] mb-[15px]">
                   {item.name}
                 </div>
