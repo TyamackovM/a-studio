@@ -1,4 +1,5 @@
 // import swiper react components
+"use client";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // import swiper styles
@@ -6,8 +7,9 @@ import "swiper/css";
 // import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import "swiper/css/effect-cube";
+import "swiper/css/effect-fade";
 
-import { EffectCube, Pagination } from "swiper/modules";
+import { Keyboard, Navigation, Pagination } from "swiper/modules";
 
 // service data
 export const serviceData = [
@@ -119,32 +121,35 @@ const ServiceSlider = () => {
   return (
     <div className="flex justify-center items-center max-xl:mt-[40px] xl:h-screen">
       <Swiper
-        effect={"cube"}
+        slidesPerView={1}
+        spaceBetween={30}
         grabCursor={true}
-        cubeEffect={{
-          shadow: true,
-          slideShadows: true,
-          shadowOffset: 20,
-          shadowScale: 0.94,
+        keyboard={{
+          enabled: true,
         }}
         pagination={{
           clickable: true,
         }}
-        modules={[EffectCube, Pagination]}
-        className="max-sm:h-[550px] max-sm:w-[350px] sm:w-[350px] sm:h-[550px] md:w-[650px] md:h-[550px] xl:h-[650px] xl:w-[900px]"
+        navigation={{
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        }}
+        modules={[Keyboard, Pagination, Navigation]}
+        className="text=white max-sm:h-[550px] max-sm:w-[350px] sm:w-[350px] sm:h-[550px] md:w-[650px] md:h-[550px] xl:h-[650px] xl:w-[900px]"
       >
         {serviceData?.map((item, index) => {
           return (
             <SwiperSlide key={index}>
-              <div className="text-center text-[32px] mb-[15px]">
-                {item.name}
-              </div>
-              <div
-                className={`bg-cover ${item?.image} max-sm:h-[300px] sm:h-[300px] xl:h-[400px] bg-no-repeat bg-center cursor-pointer transition-all duration-300`}
-              ></div>
-
-              <div className="text-white max-sm:text-[12px] sm:text-[14px] md:text-[15px] h-[150px] max-sm:h-[150px] flex justify-center items-center leading-normal text-center">
-                {item.description}
+              <div className="slide-container">
+                <div className="text-center text-[32px] mb-[15px]">
+                  {item.name}
+                </div>
+                <div
+                  className={`bg-cover ${item?.image} max-sm:h-[300px] sm:h-[300px] xl:h-[400px] bg-no-repeat bg-center cursor-pointer transition-all duration-300`}
+                ></div>
+                <div className="text-white max-sm:text-[12px] sm:text-[14px] md:text-[15px] h-[150px] max-sm:h-[150px] flex justify-center items-center leading-normal text-center">
+                  {item.description}
+                </div>
               </div>
             </SwiperSlide>
           );
