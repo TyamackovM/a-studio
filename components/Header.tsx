@@ -1,16 +1,9 @@
 //* icons
-import {
-  HiHome,
-  HiUser,
-  HiViewColumns,
-  HiRectangleGroup,
-  HiChatBubbleBottomCenterText,
-  HiEnvelope,
-} from "react-icons/hi2";
+import { HiHome, HiRectangleGroup, HiEnvelope } from "react-icons/hi2";
 
 import { MdCalculate, MdStyle } from "react-icons/md";
-import { FaProjectDiagram } from "react-icons/fa";
 import { PiStepsFill } from "react-icons/pi";
+import { AiFillLayout } from "react-icons/ai";
 
 //? next link
 import Link from "next/link";
@@ -25,6 +18,7 @@ export const navData = [
   { name: "Портфолио", path: "/portfolio", icon: <HiRectangleGroup /> },
   { name: "Расчет", path: "/calculate", icon: <MdCalculate /> },
   { name: "Интерьеры", path: "/styles", icon: <MdStyle /> },
+  { name: "РБ", path: "/chemes", icon: <AiFillLayout /> },
   { name: "Контакты", path: "/contact", icon: <HiEnvelope /> },
 ];
 
