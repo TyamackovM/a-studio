@@ -18,7 +18,7 @@ export const navData = [
   { name: "Портфолио", path: "/portfolio", icon: <HiRectangleGroup /> },
   { name: "Расчет", path: "/calculate", icon: <MdCalculate /> },
   { name: "Интерьеры", path: "/styles", icon: <MdStyle /> },
-  { name: "РБ", path: "/chemes", icon: <AiFillLayout /> },
+  { name: "РД", path: "/schemes", icon: <AiFillLayout /> },
   { name: "Контакты", path: "/contact", icon: <HiEnvelope /> },
 ];
 
