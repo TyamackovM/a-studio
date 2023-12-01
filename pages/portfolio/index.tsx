@@ -23,6 +23,14 @@ export const projectsData = [
     name: "2-комнатная квартира 60㎡",
     images: ["/kv1.jpg", "/kv6.jpg", "/kv3.jpg", "/kv4.jpg"],
   },
+  {
+    name: "2-комнатная квартира 64㎡",
+    images: ["/k2-1.jpg", "/k2-2.jpg", "/k2-3.jpg", "/k2-4.jpg"],
+  },
+  {
+    name: "2-комнатная квартира 73㎡",
+    images: ["/k3-1.jpg", "/k3-2.jpg", "/k3-3.jpg", "/k3-4.jpg"],
+  },
 ];
 
 export default function index() {
