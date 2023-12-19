@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from "react";
 import { jostReg } from "../../fonts/fonts";
 import { Fade } from "react-awesome-reveal";
 
@@ -26,22 +27,39 @@ export const secondIcons = [
 export const icons = [...firstIcons, ...secondIcons];
 
 export default function index() {
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    // Set initial window width
+    setWindowWidth(window.innerWidth);
+
+    // Add event listener to update window width on resize
+    window.addEventListener("resize", handleResize);
+
+    // Remove event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div className="about-container overflow-auto flex items-center flex-col xl:justify-center">
       <h2 className={`h2 p-6 ${jostReg.className}`}>Этапы дизайн проекта</h2>
       <div className="icon-grid xl:flex xl:justify-center">
         {firstIcons.map((circle, index) => (
-          <>
-            <div
-              key={index}
-              className="flex flex-col items-center justify-center icon-container"
-            >
+          <React.Fragment key={circle.title}>
+            <div className="flex flex-col items-center justify-center icon-container">
               <div className="bg-white rounded-full p-4 text-main mb-2 w-20 h-20 flex items-center justify-center circle-icon">
                 {circle.icon}
               </div>
               <span className="text-center icon-text">{circle.title}</span>
             </div>
-            {index !== firstIcons.length - 1 && (
+            {(windowWidth <= 550 ||
+              (windowWidth > 550 && index !== firstIcons.length - 1)) && (
               <Fade delay={index * 700}>
                 <HiArrowLongRight
                   className="arrow-size text-accent"
@@ -49,16 +67,13 @@ export default function index() {
                 />
               </Fade>
             )}
-          </>
+          </React.Fragment>
         ))}
       </div>
       <div className="icon-grid pb-icon xl:flex xl:justify-center">
         {secondIcons.map((circle, index) => (
-          <>
-            <div
-              key={index}
-              className="flex flex-col items-center justify-center icon-container"
-            >
+          <React.Fragment key={circle.title}>
+            <div className="flex flex-col items-center justify-center icon-container">
               <div className="bg-white rounded-full p-4 text-main mb-2 w-20 h-20 flex items-center justify-center circle-icon">
                 {circle.icon}
               </div>
@@ -72,7 +87,7 @@ export default function index() {
                 />
               </Fade>
             )}
-          </>
+          </React.Fragment>
         ))}
       </div>
     </div>
